@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Parsing the http requestlogs """
 import sys
 import re
 import signal
