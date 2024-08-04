@@ -3,6 +3,7 @@
 
 import sys
 
+
 def is_valid(board, row, col):
     """Check if a queen can be placed on board[row][col]"""
     for i in range(row):
@@ -11,6 +12,7 @@ def is_valid(board, row, col):
            board[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(N, row, board, solutions):
     """Solve the N queens problem using backtracking"""
@@ -23,10 +25,12 @@ def solve_nqueens(N, row, board, solutions):
                 solve_nqueens(N, row + 1, board, solutions)
                 board[row] = -1
 
+
 def print_solutions(solutions):
     """Print all solutions in the specified format"""
     for solution in solutions:
         print(solution)
+
 
 def main():
     """Main function to handle input and initiate solving"""
@@ -48,6 +52,7 @@ def main():
     board = [-1] * N
     solve_nqueens(N, 0, board, solutions)
     print_solutions(solutions)
+
 
 if __name__ == "__main__":
     main()
